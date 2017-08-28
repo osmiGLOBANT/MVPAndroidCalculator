@@ -17,9 +17,10 @@
         android:background="#2d259b"
         android:gravity="end"
         android:maxLines="1"
-        android:text=""
+        android:text="0"
         android:textColor="#ffffff"
-        android:textSize="70sp" />
+        android:textSize="70sp"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,6 +28,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/text_result"
         android:background="@color/colorPrimary"
+
         >
 
         <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -145,7 +147,7 @@
 
             <Button
                 android:id="@+id/button_number_two"
-                style="@style/Widget.AppCompat.Button.Borderless"
+
                 android:text="2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -156,8 +158,8 @@
                 />
 
             <Button
-                android:id="@+id/button_three"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/button_number_three"
+
                 android:text="3"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -169,7 +171,7 @@
 
             <Button
                 android:id="@+id/button_substract"
-                style="@style/Widget.AppCompat.Button.Borderless"
+
                 android:text="-"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -181,7 +183,7 @@
 
             <Button
                 android:id="@+id/button_number_point"
-                style="@style/Widget.AppCompat.Button.Borderless"
+
                 android:text="."
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -193,7 +195,7 @@
 
             <Button
                 android:id="@+id/button_number_zero"
-                style="@style/Widget.AppCompat.Button.Borderless"
+
                 android:text="0"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -205,7 +207,7 @@
 
             <Button
                 android:id="@+id/button_number_equal"
-                style="@style/Widget.AppCompat.Button.Borderless"
+
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@color/colorPrimary"
@@ -216,7 +218,7 @@
 
             <Button
                 android:id="@+id/button_add"
-                style="@style/Widget.AppCompat.Button.Borderless"
+
                 android:text="+"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -228,7 +230,7 @@
 
             <Button
                 android:id="@+id/button_clear"
-                style="@style/Widget.AppCompat.Button.Borderless"
+
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:text="C"
