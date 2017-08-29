@@ -7,6 +7,10 @@ import com.globant.mvpandroidcalculator.util.math.MathUtil;
 
 public class CalculatorModel {
 
+    public static final int ADD = 1;
+    public static final int SUB = 2;
+    public static final int MUL = 3;
+    public static final int DIV = 4;
     private double res = 0;
     private double number = 0;
     private StringBuilder sb;
@@ -71,24 +75,24 @@ public class CalculatorModel {
             setNumber();
         }
         switch(action) {
-            case 1 :
+            case ADD :
                 res = res + number;
                 resetStringNum();
                 result = String.valueOf(res);
                 break;
 
-            case 2 :
+            case SUB :
                 res = res - number;
                 resetStringNum();
                 result = String.valueOf(res);
                 break;
 
-            case 3 :
+            case MUL :
                 res = res * number;
                 resetStringNum();
                 result = String.valueOf(res);
                 break;
-            case 4 :
+            case DIV :
                 if(res == 0){
                     result = "Error";
                 }

@@ -94,22 +94,22 @@ public class CalculatorPresenter extends BasePresenter{
     }
 
     public void onAddButtonPressed(){
-        model.setOperation(1);
+        model.setOperation(CalculatorModel.ADD);
         view.setRes(model.getRes());
     }
 
     public void onSubstractracButtonPressed(){
-        model.setOperation(2);
+        model.setOperation(CalculatorModel.SUB);
         view.setRes(model.getRes());
     }
 
     public void onMultiplyButtonPressed(){
-        model.setOperation(3);
+        model.setOperation(CalculatorModel.MUL);
         view.setRes(model.getRes());
     }
 
     public void onDividerButtonPressed(){
-        model.setOperation(4);
+        model.setOperation(CalculatorModel.DIV);
         view.setRes(model.getRes());
     }
 
