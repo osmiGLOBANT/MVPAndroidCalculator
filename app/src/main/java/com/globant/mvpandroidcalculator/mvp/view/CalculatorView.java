@@ -9,7 +9,12 @@ import butterknife.OnClick;
 
 import com.globant.mvpandroidcalculator.R;
 import com.globant.mvpandroidcalculator.util.bus.RxBus;
+import com.globant.mvpandroidcalculator.util.bus.observers.AddButtonObserver;
 import com.globant.mvpandroidcalculator.util.bus.observers.ClearButtonPressObserver;
+import com.globant.mvpandroidcalculator.util.bus.observers.DividerButtonObserver;
+import com.globant.mvpandroidcalculator.util.bus.observers.EqualButtonObserver;
+import com.globant.mvpandroidcalculator.util.bus.observers.MultiplyButtonObserver;
+import com.globant.mvpandroidcalculator.util.bus.observers.SubstractButtonObserver;
 
 public class CalculatorView extends BaseView {
 
@@ -65,6 +70,30 @@ public class CalculatorView extends BaseView {
     @OnClick(R.id.button_clear)
     public void clearButtonPressed(){
         RxBus.post(new ClearButtonPressObserver.ClearPressed());
+    }
+
+    @OnClick(R.id.button_add)
+    public void addButtonPressed(){
+        RxBus.post(new AddButtonObserver.AddPressed());
+    }
+
+    @OnClick(R.id.button_equal)
+    public void equalButtonPressed(){
+        RxBus.post(new EqualButtonObserver.EqualPressed());
+    }
+
+    @OnClick(R.id.button_substract)
+    public void substractButtonPressed(){
+        RxBus.post(new SubstractButtonObserver.SubPressed());
+    }
+
+    @OnClick(R.id.button_multiply)
+    public void multiplyButtonPressed(){
+        RxBus.post(new MultiplyButtonObserver.MultiplyPressed());
+    }
+    @OnClick(R.id.button_divide)
+    public void dividerButtonPressed(){
+        RxBus.post(new DividerButtonObserver.DivPressed());
     }
 
     public void setRes(String res){
