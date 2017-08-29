@@ -206,7 +206,7 @@
                 />
 
             <Button
-                android:id="@+id/button_number_equal"
+                android:id="@+id/button_equal"
 
                 android:layout_width="80dp"
                 android:layout_height="80dp"
