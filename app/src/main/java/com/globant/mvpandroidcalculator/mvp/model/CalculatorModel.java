@@ -11,6 +11,8 @@ public class CalculatorModel {
     public static final int SUB = 2;
     public static final int MUL = 3;
     public static final int DIV = 4;
+    public static final String ZERO = "0";
+    public static final String DOT = ".";
     private double res = 0;
     private double number = 0;
     private StringBuilder sb;
@@ -43,7 +45,6 @@ public class CalculatorModel {
     }
 
     public String getRes() {
-
         if(!MathUtil.isDecimal(res)){
             return String.valueOf((int)res);
         }
@@ -63,7 +64,6 @@ public class CalculatorModel {
             }
             resetStringNum();
         }
-
         action = op;
         lastKey = OPERATOR;
     }
@@ -132,28 +132,30 @@ public class CalculatorModel {
     public String retainNum(String num){
         lastKey = NUMBER;
 
-
         if(lastKey == OPERATOR){
             res = number;
         }
 
-
-
-
-        if(sb.length() == 0 && num.equals("0")) {
-
+        if(sb.length() == 0 && num.equals(ZERO)) {
             return resetStringNum();
-
         }
-        
         else{
-            sb.append(num);
-            return sb.toString();
+
+            if(num.equals(DOT) ){
+                if( !sb.toString().contains(DOT)){
+                    if(sb.length() == 0){
+                     sb.append(ZERO).append(DOT);
+                    }
+                    else {
+                        sb.append(DOT);
+                    }
+                }
+                return sb.toString();
+            }
+            else{
+                sb.append(num);
+                return sb.toString();
+            }
         }
-
-
     }
-
-
-
 }

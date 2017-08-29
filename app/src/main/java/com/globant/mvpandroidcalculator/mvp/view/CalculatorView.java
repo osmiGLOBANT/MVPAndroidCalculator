@@ -67,6 +67,11 @@ public class CalculatorView extends BaseView {
         RxBus.post(new String("0"));
     }
 
+    @OnClick(R.id.button_number_dot)
+    public void dotButtonPressed(){
+        RxBus.post(new String("."));
+    }
+
     @OnClick(R.id.button_clear)
     public void clearButtonPressed(){
         RxBus.post(new ClearButtonPressObserver.ClearPressed());
