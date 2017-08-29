@@ -48,10 +48,11 @@ public class CalculatorModel {
         }
     }
 
-    public void add() {
+    public void setOperation(int op){
         if(lastKey != OPERATOR){
-            if(countNumbers>1){
-             setNumber();
+            if(countNumbers>0){
+                performOperation();
+                setNumber();
             }
             else {
                 setRes();
@@ -59,51 +60,10 @@ public class CalculatorModel {
             resetStringNum();
         }
 
-
-        action = 1;
+        action = op;
         lastKey = OPERATOR;
     }
 
-    public void substract() {
-        if(countNumbers>1){
-            setNumber();
-        }
-        else {
-            setRes();
-        }
-        resetStringNum();
-
-
-        action = 2;
-        lastKey = OPERATOR;
-    }
-
-    public void multiply() {
-        if(countNumbers>1){
-            setNumber();
-        }
-        else {
-            setRes();
-        }
-        resetStringNum();
-
-
-        action = 3;
-        lastKey = OPERATOR;
-    }
-
-    public void divide() {
-        if(countNumbers>1){
-            setNumber();
-        }
-        else {
-            setRes();
-        }
-        resetStringNum();
-
-        action = 4;
-        lastKey = OPERATOR;
-    }
 
     public void performOperation(){
 

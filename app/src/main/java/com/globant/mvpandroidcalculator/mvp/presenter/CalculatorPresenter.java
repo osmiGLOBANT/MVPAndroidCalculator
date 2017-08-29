@@ -86,7 +86,7 @@ public class CalculatorPresenter extends BasePresenter{
 
     public void onEqualButtonPressed(){
         model.performOperation();
-        view.setRes(String.valueOf(model.getRes()));
+        view.setRes(model.getRes());
     }
     public void onClearButtonPressed(){
         model.reset();
@@ -94,19 +94,23 @@ public class CalculatorPresenter extends BasePresenter{
     }
 
     public void onAddButtonPressed(){
-        model.add();
+        model.setOperation(1);
+        view.setRes(model.getRes());
     }
 
     public void onSubstractracButtonPressed(){
-        model.substract();
+        model.setOperation(2);
+        view.setRes(model.getRes());
     }
 
     public void onMultiplyButtonPressed(){
-        model.multiply();
+        model.setOperation(3);
+        view.setRes(model.getRes());
     }
 
     public void onDividerButtonPressed(){
-        model.divide();
+        model.setOperation(4);
+        view.setRes(model.getRes());
     }
 
 }
